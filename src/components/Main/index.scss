@@ -1,0 +1,36 @@
+.main {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+
+    &__title {
+        font-size: 36px;
+        font-weight: 700;
+        margin-bottom: 30px;
+    }
+
+    &__grid {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        &__item {
+            margin: 15px;
+            text-decoration: none;
+            font-size: 24px;
+            padding: 15px;
+            border-radius: 2px;
+            color: white;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+            transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+            background: rgb(102,45,140);
+            background: linear-gradient(45deg, #02aabd 20%, #00cdac 80%);
+
+            &:hover {
+                box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+            }
+        }
+    }
+}

@@ -78,8 +78,7 @@ module.exports = {
                     'builtin',
                     'external',
                     'internal'
-                ],
-                'newlines-between': 'always'
+                ]
             }
         ],
         'import/no-extraneous-dependencies': [
