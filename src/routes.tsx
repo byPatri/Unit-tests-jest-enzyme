@@ -1,4 +1,4 @@
-import Basic from './components/Basic';
+import Basic from './examples/Basic';
 
 type RouteType = {
     name: string,
