@@ -1,4 +1,5 @@
-import Basic from './examples/Basic';
+import StoreExample from './examples/Store';
+import BasicExample from './examples/Basic';
 
 type RouteType = {
     name: string,
@@ -7,5 +8,6 @@ type RouteType = {
 };
 
 export const ROUTES: RouteType[] = [
-    { name: 'Basic', label: 'Basic React Component + Tests', Component: Basic }
+    { name: 'Basic', label: 'Basic React Component', Component: BasicExample },
+    { name: 'Store', label: 'React Component connected to redux store', Component: StoreExample }
 ];

@@ -1,0 +1,25 @@
+.store-example {
+    &__button {
+        cursor: pointer;
+        padding: 10px;
+        border: 1px solid black;
+        width: 150px;
+        text-align: center;
+        transition: .25s;
+        background-color: white;
+        color: black;
+
+        &:hover {
+            background-color: black;
+            color: white;
+        }
+    }
+
+    &__dialog {
+        background: #02aabd;
+        margin-top: 20px;
+        padding: 20px;
+        width: 150px;
+        text-align: center;
+    }
+}

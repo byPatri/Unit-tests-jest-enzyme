@@ -3,8 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import { ROUTES } from '../routes';
 import Main from './Main';
-
-import { StoreProvider } from '../providers/StoreProviders';
+import { StoreProvider } from '../providers/StoreProvider';
 
 const AppWrapper = () => (
     <StoreProvider>

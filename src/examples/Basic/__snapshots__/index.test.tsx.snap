@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`components/Basic/index should render correctly 1`] = `
-<Basic>
+exports[`examples/Basic should render correctly 1`] = `
+<BasicExample>
   <div>
     Basic React Component
   </div>
-</Basic>
+</BasicExample>
 `;

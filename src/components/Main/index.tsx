@@ -6,7 +6,7 @@ import './index.scss';
 const Main = () => (
     <div className='main'>
         <div className='main__title'>
-            Examples:
+            Tests Examples:
         </div>
         <div className='main__grid'>
             {
