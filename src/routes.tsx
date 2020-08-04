@@ -2,6 +2,7 @@ import StoreExample from './examples/Store';
 import BasicExample from './examples/Basic';
 import FetchExample from './examples/Fetch';
 import StateAndPropsChangesExample from './examples/StateAndPropsChanges';
+import ExternMocksExample from './examples/ExternMocks';
 
 type RouteType = {
     name: string,
@@ -11,6 +12,7 @@ type RouteType = {
 
 export const ROUTES: RouteType[] = [
     { name: 'Basic', label: 'Basic React Component', Component: BasicExample },
+    { name: 'ExternMocks', label: 'Extern Mocks', Component: ExternMocksExample },
     {
         name: 'StateAndPropsChanges',
         label: 'React Component state and props changes',

@@ -1,5 +1,7 @@
 import React from 'react';
 
-const DumbComponent: React.FC<any> = () => null;
+export type DumbComponentType = React.FC<any>
+
+const DumbComponent: DumbComponentType = () => null;
 
 export default DumbComponent;
