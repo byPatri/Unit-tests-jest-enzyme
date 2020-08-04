@@ -12,7 +12,7 @@ jest.mock('../../store/dialog/selectors', () => ({
 }));
 
 describe('examples/Store', () => {
-    let store: MockStore<any>;
+    let store: MockStore;
     let Provider: React.FC;
 
     beforeEach(() => {
