@@ -1,22 +1,19 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import { getGhibliMovies } from '../../api/fetch';
 
 type Props = {
     className?: string
 };
 
-type IFilm = {
-    id: string;
-    title: string;
-}
-
 const FetchExample: React.FC<Props> = ({ className }) => {
     const [films, setFilms] = useState([]);
 
     useEffect(() => {
-        axios.get('https://ghibliapi.herokuapp.com/films')
-            .then(({ data }) => setFilms(data.map((item: IFilm) => item.title)))
-            .catch((error) => console.log(error));
+        const fetchData = async () => {
+            const result = await getGhibliMovies();
+            setFilms(result);
+        };
+        fetchData();
     }, []);
 
     return (
