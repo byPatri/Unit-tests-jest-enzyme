@@ -3,6 +3,7 @@ import BasicExample from './examples/Basic';
 import FetchExample from './examples/Fetch';
 import StateAndPropsChangesExample from './examples/StateAndPropsChanges';
 import ExternMocksExample from './examples/ExternMocks';
+import CustomHookExample from './examples/CustomHook';
 
 type RouteType = {
     name: string,
@@ -19,5 +20,6 @@ export const ROUTES: RouteType[] = [
         Component: StateAndPropsChangesExample
     },
     { name: 'Fetch', label: 'Basic API fetch', Component: FetchExample },
+    { name: 'CustomHook', label: 'Custom Hook', Component: CustomHookExample },
     { name: 'Store', label: 'React Component connected to redux store', Component: StoreExample },
 ];
