@@ -16,7 +16,7 @@ export const useUsers = () => {
         } else if (!USERS.includes(value) && userExists) {
             setUserExists(false);
         }
-    }, [value]);
+    }, [value, userExists]);
 
     return {
         searchUser: setValue,
