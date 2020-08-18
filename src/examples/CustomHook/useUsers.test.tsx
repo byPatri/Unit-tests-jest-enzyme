@@ -7,10 +7,12 @@ describe('examples/CustomHook/useUsers', () => {
     let TestComponent: React.FC;
 
     beforeEach(() => {
+        // We need to create component which will be used to test hook
         // eslint-disable-next-line react/display-name
         TestComponent = () => {
             const hook = useUsers();
 
+            // We pass hook as property to element so we can access it values
             return (<div data-hook={hook} />);
         };
     });
@@ -28,6 +30,7 @@ describe('examples/CustomHook/useUsers', () => {
 
         const { searchUser } = wrapper.find('div').prop('data-hook');
         act(() => searchUser(USERS[0]));
+        // This setProps updates mounted component, for shallow we can use wrapper.update()
         wrapper.setProps({});
         const { userExists } = wrapper.find('div').prop('data-hook');
 

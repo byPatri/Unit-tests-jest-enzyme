@@ -5,12 +5,16 @@ import BasicExample from './index';
 
 describe('examples/Basic', () => {
     it('should not throw on mount', () => {
+        // Mount should be used as callback, otherwise
+        // it will throw all tests, not only this one
         expect(() => mount(<BasicExample />)).not.toThrow();
     });
 
     it('should render correctly', () => {
         const wrapper = mount(<BasicExample />);
 
+        // Snapshots will be created inside __snapshots__ folder
+        // if there are some changes in component you should update them
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -21,7 +25,7 @@ describe('examples/Basic', () => {
         expect(div.text()).toEqual('Basic React Component');
     });
 
-    it('should has passed in props className', () => {
+    it('should has passed in props className property', () => {
         const wrapper = mount(<BasicExample className='test-classname' />);
         const div = wrapper.find('div').at(0);
 

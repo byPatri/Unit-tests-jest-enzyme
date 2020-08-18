@@ -33,6 +33,7 @@ describe('examples/StateAndPropsChanges', () => {
         const wrapper = mount(<StateAndPropsChangesExample />);
 
         const onChange = wrapper.find(DumbComponent).prop('onChange');
+        // If we want to call component event we need to wrap it in act from react-dom/test-utils
         act(() => onChange(event));
 
         expect(wrapper.find('.input-value').text()).toEqual('Input value: abcd');

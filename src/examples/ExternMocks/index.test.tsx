@@ -6,9 +6,11 @@ import { externFunction } from './externFunction';
 import { toMock } from '../../testsUtils/toMock';
 
 jest.mock('../../components/DumbComponent', () => {
+    // In jest we need to declare variables inside of mock if we want to use it in it
     const mockComponent: DumbComponentType = ({ children }) => children;
 
     return ({
+        // https://github.com/facebook/jest/issues/5579
         __esModule: true,
         default: mockComponent
     });
@@ -27,6 +29,7 @@ describe('examples/ExternMocks', () => {
 
     it('should render what externFunction returns inside div', () => {
         const mockedValue = 'Extern Function Value Mocked';
+        // toMock helps in typing mocked functions
         toMock(externFunction).mockReturnValue(mockedValue);
         const wrapper = mount(<ExternMocksExample />);
 
