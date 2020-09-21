@@ -1,3 +1,4 @@
+import React from 'react';
 import StoreExample from './examples/Store';
 import BasicExample from './examples/Basic';
 import FetchExample from './examples/Fetch';
