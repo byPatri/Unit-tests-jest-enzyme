@@ -7,9 +7,7 @@ import { isDialogOpenSelector } from '../../store/dialog/selectors';
 import { toMock } from '../../testsUtils/toMock';
 import { TOGGLE_DIALOG } from '../../store/dialog/constants';
 
-jest.mock('../../store/dialog/selectors', () => ({
-    isDialogOpenSelector: jest.fn()
-}));
+jest.mock('../../store/dialog/selectors');
 
 describe('examples/Store', () => {
     let store: MockStore;

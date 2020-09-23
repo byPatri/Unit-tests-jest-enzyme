@@ -16,9 +16,7 @@ jest.mock('../../components/DumbComponent', () => {
     });
 });
 
-jest.mock('./externFunction', () => ({
-    externFunction: jest.fn()
-}));
+jest.mock('./externFunction');
 
 describe('examples/ExternMocks', () => {
     it('should render text inside DumbComponent', () => {
